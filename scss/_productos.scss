@@ -90,182 +90,129 @@
 
 /*Product Card en index.html*/
 
-#cookies{
-    grid-area: card1;
-    div{
-        background-image: url(../images/galletaCraquelada.jpg);
-    }
+.productosDestacados__card__cookies{
+    @include card(card1,"../images/galletaCraquelada.jpg");
 }
 
 
 
-#cupcakes{
-    grid-area: card2;
-    div{
-        background-image: url(../images/cupCake.jpg);
-    }
+.productosDestacados__card__cupCake{
+    @include card(card2,"../images/cupCake.jpg");
 }
 
 
-#cakePops{
-    grid-area: card3;
-    div{
-        background-image: url(../images/cakePop.jpg);
-    }
-}
- 
-#chocolates{
-    grid-area: card4;
-    div{
-        background-image: url(../images/bombonesChocolate.jpg);
-    }
-
+.productosDestacados__card__cakePop{
+    @include card(card3,"../images/cakePop.jpg");
 }
 
-#fechasEspeciales{
-    grid-area: card5;
-    div{
-        background-image: url(../images/torta23.jpg);
-    }    
+
+
+.productosDestacados__card__bombonesChocolate{
+    @include card(card4,"../images/bombonesChocolate.jpg");
 }
 
-#giftCard{
-    grid-area: card6;
-    div{
-        background-image: url(../images/giftCard.png);
-    }
+
+
+.productosDestacados__card__tortaNumero{
+    @include card(card5,"../images/torta23.jpg");
 }
 
+
+
+.productosDestacados__card__giftCard{
+    @include card(card6,"../images/giftCard.png");
+}
 
 /*Product Card en tortasDecoradas.html*/
 
-#circo{
-    grid-area: card1;
-    div{
-        background-image: url(../images/tortaCirco.jpg);
-    }
+.productosDestacados__card__circo{
+    @include card(card1,"../images/tortaCirco.jpg");
 }
 
 
-#naturaleza{
-    grid-area: card2;
-    div{
-        background-image: url(../images/tortaFlores.jpg);
-    }
-}
-
-#bautismoY1{
-    grid-area: card3;
-    div{
-        background-image: url(../images/tortaBautismo.jpg);
-    }
-}
-
-#bodas{
-    grid-area: card4;
-    div{
-        background-image: url(../images/tortaBoda.jpg);
-    }
-}
-
-#quince{
-    grid-area: card5;
-    div{
-        background-image: url(../images/torta15.jpg);
-    }
+.productosDestacados__card__naturaleza{
+    @include card(card2,"../images/tortaFlores.jpg");
 }
 
 
-#giftCard{
-    grid-area: card6;
-    div{
-        background-image: url(../images/giftCard.png);
-    }
+.productosDestacados__card__bautismoY1{
+    @include card(card3,"../images/tortaBautismo.jpg");
 }
+
+
+.productosDestacados__card__bodas{
+    @include card(card4,"../images/tortaBoda.jpg");
+}
+
+
+.productosDestacados__card__quince{
+    @include card(card5,"../images/torta15.jpg");
+}
+
 
 /*Product Card en pasteleriaTradicional.html*/
 
-#tartaFrutillas{
-    grid-area: card1;
-    div{
-        background-image: url(../images/tortaFrutilla.jpg);
-    }
+
+.productosDestacados__card__tartaFrutillas{
+    @include card(card1,"../images/tortaFrutilla.jpg");
 }
 
 
-#tartaChocolate{
-    grid-area: card2;
-    div{
-        background-image: url(../images/tortaChocolate.jpg);
-    }
-}
-
-#tartaDurazno{
-    grid-area: card3;
-    div{
-        background-image: url(../images/tortaDurazno.jpg);
-    }
-}
-
-#galletasDecoradas{
-    grid-area: card4;
-    div{
-        background-image: url(../images/galletaBicicletaH300.jpg);
-    }
-}
-
-#galletasCraqueladas{
-    grid-area: card5;
-    div{
-        background-image: url(../images/galletaCraquelada.jpg);
-    }
+.productosDestacados__card__tartaChocolate{
+    @include card(card2,"../images/tortaChocolate.jpg");
 }
 
 
-#galletasPastillaje{
-    grid-area: card6;
-    div{
-        background-image: url(../images/galletaFlores.jpg);
-    }
+.productosDestacados__card__tartaDurazno{
+    @include card(card3,"../images/tortaDurazno.jpg");
 }
+
+
+.productosDestacados__card__galletasDecoradas{
+    @include card(card4,"../images/galletaBicicletaH300.jpg");
+}
+
+
+.productosDestacados__card__galletasCraqueladas{
+    @include card(card5,"../images/galletaCraquelada.jpg");
+}
+
+.productosDestacados__card__galletasPastillaje{
+    @include card(card6,"../images/galletaFlores.jpg");
+}
+
 
 /*Product Card en rinconSalado.html*/
 
-#fosforitos{
-    grid-area: card1;
-    div{
-        background-image: url(../images/fosforitos.jpg);
-    }
+
+.productosDestacados__card__fosforitos{
+    @include card(card1,"../images/fosforitos.jpg");
 }
 
 
-#brusquetas{
-    grid-area: card2;
-    div{
-        background-image: url(../images/brusquetas.jpg);
-    }
+.productosDestacados__card__brusquetas{
+    @include card(card2,"../images/brusquetas.jpg");
 }
 
-#canapes{
-    grid-area: card3;
-    div{
-        background-image: url(../images/canapes.jpg);
-    }
+
+.productosDestacados__card__canapes{
+    @include card(card3,"../images/canapes.jpg");
 }
 
-#empanadasArabes{
-    grid-area: card4;
-    div{
-        background-image: url(../images/lehmeyun.jpg);
-    }
+
+.productosDestacados__card__empanadasArabes{
+    @include card(card4,"../images/lehmeyun.jpg");
 }
 
-#pizzetas{
-    grid-area: card5;
-    div{
-        background-image: url(../images/pizzetas.jpg);
-    }
+
+.productosDestacados__card__pizzetas{
+    @include card(card5,"../images/pizzetas.jpg");
 }
+
+.productosDestacados__card__empanadas{
+    @include card(card6,"../images/empanadasCopetin.jpg");
+}
+
 
 
 #empanadasCopetin{

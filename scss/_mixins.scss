@@ -1,0 +1,12 @@
+
+
+/*MIXIN  para la generación de Cards*/
+
+@mixin card($posicionGrid, $urlImagen) {
+    @extend .productosDestacados__card;
+    grid-area: $posicionGrid;
+    div{
+        background-image: url(#{$urlImagen});
+    }
+
+}
