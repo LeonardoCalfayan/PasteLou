@@ -227,7 +227,8 @@
 
 .formulario{
     width:100%;
-    height: 50vh;
+    height:auto;
+    // height: 50vh;
     display: flex;
     padding: 10px 10px;
     &Izquierdo{
@@ -237,6 +238,14 @@
         justify-content: space-around;
         align-items: center;
 
+        select, input{
+            margin: 5px 0;
+            padding: 10px 10px;
+            border-radius: 5px;
+            background-color: $colorFondoGeneral;
+        }
+
+
     }
     &Derecho{
         width:60%;
@@ -245,6 +254,18 @@
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+
+        textarea, input{
+            margin: 5px 0;
+            padding: 10px 10px;
+            border-radius: 5px;
+            background-color: $colorFondoGeneral;
+        }                
+
     }
     
 }
+
+
+
+

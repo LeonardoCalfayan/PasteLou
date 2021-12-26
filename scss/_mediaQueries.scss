@@ -30,16 +30,10 @@
 /* 2er MQ para corregir solapamiento de elementos nav bar con su borde */
 
 @media screen and (max-width: 1065px){
-    // .headerMenu ul{
-    //     flex-direction: column;
-    //     li{
-    //         margin-bottom: 15px;
-    //     }
-    // }
-    // Eliminado x utilizar NAV de Bootstrap Responsive
     .mapaFormularioContacto{
 
         flex-direction: column;
+        align-items: center;
     }  
 }
 
@@ -76,11 +70,19 @@
         padding: 20px 10px;
         &Izquierdo{
             width:100%;
+            height:auto;
+            input, select{
+                margin:10px 10px;
+            }  
     
         }
         &Derecho{
             width:100%;
-
+            height:auto;
+            
+            input, textarea{
+                margin:10px 10px;
+            }    
         }
         
     }
@@ -89,17 +91,33 @@
             flex-direction: column;
    
     }
+
 }
 
 /* 4to MQ (Vista Mobile) para ubicar todo el contenido en forma vertical cuando se empieza a solapar el conenido del Header */
 
 @media screen and (max-width: 550px){
 
+    
+    .headerLogo a img{
+        width:100px;
+        height:auto;
+    }
+    
     .headerTitle{
         flex-direction: column;
     
     }
     
+    @keyframes destacar{
+
+        0%{color: rgb(247, 159, 203); }
+        50%{transform: scale(1.2);
+            color:#CF2F87}
+        100%{transform: scale(1);;
+            color: rgb(247, 159, 203) }    
+    }
+
     .nosotros{
         flex-direction: column;
         height:fit-content;
@@ -115,4 +133,18 @@
        
   
     }
+
+    
+    .mapaFormularioContacto{
+
+        align-items: center;
+        .mapaFormularioContactoItem{
+            width: 80%;
+            iframe{
+                width:80%;
+                height:auto;
+            }
+        }
+     }  
+
 }

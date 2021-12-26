@@ -27,7 +27,8 @@ body {
     text-align: center;
     margin-bottom: 20px; }
   .headerLogo {
-    width: 40%; }
+    width: 40%;
+    height: 100%; }
 
 #headerTituloTexto {
   width: 60%;
@@ -68,7 +69,8 @@ body {
 
 /* CARROUSEL */
 #carouselProductos {
-  width: 40%;
+  width: 300px;
+  height: 300px;
   margin: 0 auto; }
 
 /* PRODUCTOS DESTACADOS */
@@ -259,7 +261,7 @@ body {
 /*FORMULARIOS*/
 .formulario {
   width: 100%;
-  height: 50vh;
+  height: auto;
   display: flex;
   padding: 10px 10px; }
   .formularioIzquierdo {
@@ -268,6 +270,11 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center; }
+    .formularioIzquierdo select, .formularioIzquierdo input {
+      margin: 5px 0;
+      padding: 10px 10px;
+      border-radius: 5px;
+      background-color: #F9F3DF; }
   .formularioDerecho {
     width: 60%;
     padding: 20px 20px;
@@ -275,6 +282,11 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center; }
+    .formularioDerecho textarea, .formularioDerecho input {
+      margin: 5px 0;
+      padding: 10px 10px;
+      border-radius: 5px;
+      background-color: #F9F3DF; }
 
 /*NOSOTROS*/
 .nosotros {
@@ -322,11 +334,17 @@ body {
     flex-direction: column;
     align-items: center; }
     .mapaFormularioContactoItem form fieldset {
+      width: 80%;
       display: flex;
       flex-direction: column;
+      align-items: center;
       justify-content: center; }
-      .mapaFormularioContactoItem form fieldset input {
-        margin: 20px 20px; }
+      .mapaFormularioContactoItem form fieldset input, .mapaFormularioContactoItem form fieldset textarea {
+        width: 80%;
+        margin: 20px 20px;
+        padding: 10px 10px;
+        border-radius: 5px;
+        background-color: #F9F3DF; }
 
 /*FOOTER*/
 .footer img {
@@ -359,7 +377,8 @@ body {
 /* 2er MQ para corregir solapamiento de elementos nav bar con su borde */
 @media screen and (max-width: 1065px) {
   .mapaFormularioContacto {
-    flex-direction: column; } }
+    flex-direction: column;
+    align-items: center; } }
 
 /* 3er MQ para pasar grid de productos de 2 columnas a 1 columna y 6 filas cuando desaparece otra card*/
 @media screen and (max-width: 780px) {
@@ -379,16 +398,34 @@ body {
     flex-direction: column;
     padding: 20px 10px; }
     .formularioIzquierdo {
-      width: 100%; }
+      width: 100%;
+      height: auto; }
+      .formularioIzquierdo input, .formularioIzquierdo select {
+        margin: 10px 10px; }
     .formularioDerecho {
-      width: 100%; }
+      width: 100%;
+      height: auto; }
+      .formularioDerecho input, .formularioDerecho textarea {
+        margin: 10px 10px; }
   .sobreNosotrosItem {
     flex-direction: column; } }
 
 /* 4to MQ (Vista Mobile) para ubicar todo el contenido en forma vertical cuando se empieza a solapar el conenido del Header */
 @media screen and (max-width: 550px) {
+  .headerLogo a img {
+    width: 100px;
+    height: auto; }
   .headerTitle {
     flex-direction: column; }
+  @keyframes destacar {
+    0% {
+      color: #f79fcb; }
+    50% {
+      transform: scale(1.2);
+      color: #CF2F87; }
+    100% {
+      transform: scale(1);
+      color: #f79fcb; } }
   .nosotros {
     flex-direction: column;
     height: fit-content; }
@@ -396,4 +433,11 @@ body {
     width: 100%;
     padding: 50px 30px; }
   #nuestraTienda {
-    width: 100%; } }
+    width: 100%; }
+  .mapaFormularioContacto {
+    align-items: center; }
+    .mapaFormularioContacto .mapaFormularioContactoItem {
+      width: 80%; }
+      .mapaFormularioContacto .mapaFormularioContactoItem iframe {
+        width: 80%;
+        height: auto; } }
