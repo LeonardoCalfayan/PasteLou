@@ -1,5 +1,22 @@
 /*FOOTER*/
 
-.footer img{
-    transform: scale(0.8);
-}
+.footerRS{
+    display: flex;
+    justify-content: center;
+    
+    a {
+        
+        display: flex;
+        justify-content: center;
+        width: 50px;
+        img{
+            width: 100%;
+            padding: 5px 5px;
+            /*Modificación del color de los íconos SVG RS*/
+            filter: invert(28%) sepia(27%) saturate(4732%) hue-rotate(300deg) brightness(96%) contrast(93%);
+        }
+
+    }
+        
+} 
+

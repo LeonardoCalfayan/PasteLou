@@ -1,11 +1,33 @@
 /* CARROUSEL */
 
-#carouselProductos{
-    width:300px;
+
+.carousel-inner {
     height: 300px;
-    margin: 0 auto;
 }
 
+.carousel-item{
+    height: 300px;
+    margin:20px 0px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#imagenBanner1{
+    background-image: url(../images/cookies_V3.jpeg);
+}
+
+#imagenBanner2{
+    background-image: url(../images/cookies_V2.jpeg);
+ }
+
+#imagenBanner3{
+    background-image: url(../images/cupcakeV2.jpeg);
+}
+
+#imagenBanner4{
+    background-image: url(../images/tortaBanner.jpeg);
+}
 
 
 /* PRODUCTOS DESTACADOS */
@@ -13,7 +35,7 @@
 @keyframes destacar{
 
     0%{color: rgb(247, 159, 203); }
-    50%{transform: scale(1.5);
+    50%{transform: scale(1.2);
         color:#CF2F87}
     100%{transform: scale(1);;
         color: rgb(247, 159, 203) }    
@@ -80,14 +102,10 @@
             background-repeat: no-repeat;
             overflow: hidden;        
         }
-
     }
-
-
 }
 
 /* Ubicacion y fondo de las Product Card */
-
 
 /*Product Card en index.html*/
 
@@ -95,30 +113,21 @@
     @include card(card1,"../images/galletaCraquelada.jpg");
 }
 
-
-
 .productosDestacados__card__cupCake{
-    @include card(card2,"../images/cupCake.jpg");
+    @include card(card2,"../images/cupCake_s_bordes.png");
 }
-
 
 .productosDestacados__card__cakePop{
     @include card(card3,"../images/cakePop.jpg");
 }
 
-
-
 .productosDestacados__card__bombonesChocolate{
     @include card(card4,"../images/bombonesChocolate.jpg");
 }
 
-
-
 .productosDestacados__card__tortaNumero{
     @include card(card5,"../images/torta23.jpg");
 }
-
-
 
 .productosDestacados__card__giftCard{
     @include card(card6,"../images/giftCard.png");
@@ -130,21 +139,17 @@
     @include card(card1,"../images/tortaCirco.jpg");
 }
 
-
 .productosDestacados__card__naturaleza{
     @include card(card2,"../images/tortaFlores.jpg");
 }
-
 
 .productosDestacados__card__bautismoY1{
     @include card(card3,"../images/tortaBautismo.jpg");
 }
 
-
 .productosDestacados__card__bodas{
     @include card(card4,"../images/tortaBoda.jpg");
 }
-
 
 .productosDestacados__card__quince{
     @include card(card5,"../images/torta15.jpg");
@@ -153,26 +158,21 @@
 
 /*Product Card en pasteleriaTradicional.html*/
 
-
 .productosDestacados__card__tartaFrutillas{
     @include card(card1,"../images/tortaFrutilla.jpg");
 }
-
 
 .productosDestacados__card__tartaChocolate{
     @include card(card2,"../images/tortaChocolate.jpg");
 }
 
-
 .productosDestacados__card__tartaDurazno{
     @include card(card3,"../images/tortaDurazno.jpg");
 }
 
-
 .productosDestacados__card__galletasDecoradas{
     @include card(card4,"../images/galletaBicicletaH300.jpg");
 }
-
 
 .productosDestacados__card__galletasCraqueladas{
     @include card(card5,"../images/galletaCraquelada.jpg");
@@ -190,21 +190,17 @@
     @include card(card1,"../images/fosforitos.jpg");
 }
 
-
 .productosDestacados__card__brusquetas{
     @include card(card2,"../images/brusquetas.jpg");
 }
-
 
 .productosDestacados__card__canapes{
     @include card(card3,"../images/canapes.jpg");
 }
 
-
 .productosDestacados__card__empanadasArabes{
     @include card(card4,"../images/lehmeyun.jpg");
 }
-
 
 .productosDestacados__card__pizzetas{
     @include card(card5,"../images/pizzetas.jpg");
@@ -215,20 +211,11 @@
 }
 
 
-
-#empanadasCopetin{
-    grid-area: card6;
-    div{
-        background-image: url(../images/empanadasCopetin.jpg);
-    }
-}
-
 /*FORMULARIOS*/
 
 .formulario{
     width:100%;
     height:auto;
-    // height: 50vh;
     display: flex;
     padding: 10px 10px;
     &Izquierdo{
@@ -245,8 +232,8 @@
             background-color: $colorFondoGeneral;
         }
 
-
     }
+  
     &Derecho{
         width:60%;
         padding: 20px 20px;
@@ -263,7 +250,13 @@
         }                
 
     }
-    
+   
+}
+
+.logoSTacc{
+    width: 50px;
+    padding: 5px 5px;
+
 }
 
 

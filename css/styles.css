@@ -40,7 +40,7 @@ body {
   flex-direction: column;
   justify-content: space-around; }
   #headerTituloTexto h1 {
-    font-size: 4rem;
+    font-size: 6rem;
     font-style: italic;
     font-weight: bold; }
   #headerTituloTexto h2 {
@@ -52,33 +52,69 @@ body {
 .navbar {
   margin: 50px 20px;
   padding: 20px 20px;
-  border: #a0966e solid 3px; }
+  border-radius: 10px;
+  border: #a0966e solid 3px;
+  justify-content: center; }
   .navbar-brand {
     font-size: 2rem;
     font-weight: bolder;
-    margin-right: 5%; }
+    margin-right: 5%;
+    transition: all 1s; }
+    .navbar-brand:hover {
+      transform: scale(1.1); }
   .navbar-nav a {
     font-size: 2rem;
     font-weight: bold; }
+  .navbar-collapse {
+    flex-grow: inherit; }
+
+.barraNavegacion {
+  justify-content: center; }
 
 #colorTexto {
   color: #CF2F87; }
 
 .nav-link {
-  margin-right: 100px; }
+  margin-right: 100px;
+  transition: all 1s; }
+  .nav-link:hover {
+    transform: scale(1.1); }
+
+.active {
+  font-size: 2.5rem; }
+
+#active {
+  color: #ff3863; }
 
 /* CARROUSEL */
-#carouselProductos {
-  width: 300px;
+.carousel-inner {
+  height: 300px; }
+
+.carousel-item {
   height: 300px;
-  margin: 0 auto; }
+  margin: 20px 0px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+
+#imagenBanner1 {
+  background-image: url(../images/cookies_V3.jpeg); }
+
+#imagenBanner2 {
+  background-image: url(../images/cookies_V2.jpeg); }
+
+#imagenBanner3 {
+  background-image: url(../images/cupcakeV2.jpeg); }
+
+#imagenBanner4 {
+  background-image: url(../images/tortaBanner.jpeg); }
 
 /* PRODUCTOS DESTACADOS */
 @keyframes destacar {
   0% {
     color: #f79fcb; }
   50% {
-    transform: scale(1.5);
+    transform: scale(1.2);
     color: #CF2F87; }
   100% {
     transform: scale(1);
@@ -143,7 +179,7 @@ body {
 .productosDestacados__card__cupCake {
   grid-area: card2; }
   .productosDestacados__card__cupCake div {
-    background-image: url(../images/cupCake.jpg); }
+    background-image: url(../images/cupCake_s_bordes.png); }
 
 .productosDestacados__card__cakePop {
   grid-area: card3; }
@@ -253,11 +289,6 @@ body {
   .productosDestacados__card__empanadas div {
     background-image: url(../images/empanadasCopetin.jpg); }
 
-#empanadasCopetin {
-  grid-area: card6; }
-  #empanadasCopetin div {
-    background-image: url(../images/empanadasCopetin.jpg); }
-
 /*FORMULARIOS*/
 .formulario {
   width: 100%;
@@ -288,6 +319,10 @@ body {
       border-radius: 5px;
       background-color: #F9F3DF; }
 
+.logoSTacc {
+  width: 50px;
+  padding: 5px 5px; }
+
 /*NOSOTROS*/
 .nosotros {
   display: flex;
@@ -317,11 +352,14 @@ body {
   display: flex;
   flex-direction: column; }
   .sobreNosotrosItem {
-    display: flex; }
+    display: flex;
+    align-items: center; }
     .sobreNosotrosItem p {
       display: flex;
       justify-content: center;
       padding: 50px 50px; }
+    .sobreNosotrosItem img {
+      height: 521px; }
 
 .mapaFormularioContacto {
   width: 100%;
@@ -334,7 +372,6 @@ body {
     flex-direction: column;
     align-items: center; }
     .mapaFormularioContactoItem form fieldset {
-      width: 80%;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -347,12 +384,23 @@ body {
         background-color: #F9F3DF; }
 
 /*FOOTER*/
-.footer img {
-  transform: scale(0.8); }
+.footerRS {
+  display: flex;
+  justify-content: center; }
+  .footerRS a {
+    display: flex;
+    justify-content: center;
+    width: 50px; }
+    .footerRS a img {
+      width: 100%;
+      padding: 5px 5px;
+      /*Modificación del color de los íconos SVG RS*/
+      filter: invert(28%) sepia(27%) saturate(4732%) hue-rotate(300deg) brightness(96%) contrast(93%); }
 
 /* Clases Auxiliares que se reutilizan en varios contenedores */
 .tituloSeccion {
   font-size: 3rem;
+  font-weight: 800;
   text-align: center;
   padding: 30px 0; }
 
@@ -360,8 +408,11 @@ body {
   font-size: 2rem;
   text-align: center; }
 
+h1, h2, h3 {
+  font-weight: 800; }
+
 /* Utilizo criterio Desktop First para los Media Query */
-/* 1do MQ para pasar grid de productos de 3 columnas a 2 columnas y 3 filas cuando desaparece una card*/
+/* 1er MQ para pasar grid de productos de 3 columnas a 2 columnas y 3 filas cuando desaparece una card*/
 @media screen and (max-width: 1200px) {
   .productosDestacados {
     height: 1550px; }
@@ -374,18 +425,23 @@ body {
       row-gap: 5%;
       grid-template-areas: "card1 card2"  "card3 card4"  "card5 card6"; } }
 
-/* 2er MQ para corregir solapamiento de elementos nav bar con su borde */
+/* 2do MQ para corregir solapamiento de elementos nav bar con su borde */
 @media screen and (max-width: 1065px) {
   .mapaFormularioContacto {
     flex-direction: column;
-    align-items: center; } }
+    align-items: center; }
+    .mapaFormularioContactoItem iframe {
+      margin-bottom: 50px; }
+  .barraNavegacion {
+    justify-content: space-between; } }
 
 /* 3er MQ para pasar grid de productos de 2 columnas a 1 columna y 6 filas cuando desaparece otra card*/
 @media screen and (max-width: 780px) {
+  #headerTituloTexto h1 {
+    font-size: 4rem; }
   .productosDestacados {
     height: 3400px; }
     .productosDestacadosCards {
-      /* height: 80%; */
       width: 100%;
       display: grid;
       grid-template-columns: repeat(1, 1fr);
@@ -407,8 +463,21 @@ body {
       height: auto; }
       .formularioDerecho input, .formularioDerecho textarea {
         margin: 10px 10px; }
+  .nosotros {
+    flex-direction: column;
+    height: fit-content; }
+  #nosotros {
+    width: 100%;
+    padding: 50px 30px; }
+  #nuestraTienda {
+    width: 100%; }
+  /*Seccione en contacto.html*/
   .sobreNosotrosItem {
-    flex-direction: column; } }
+    flex-direction: column; }
+    .sobreNosotrosItem img {
+      height: 320px; }
+  .mapaFormularioContactoItem {
+    width: 100%; } }
 
 /* 4to MQ (Vista Mobile) para ubicar todo el contenido en forma vertical cuando se empieza a solapar el conenido del Header */
 @media screen and (max-width: 550px) {
@@ -421,23 +490,19 @@ body {
     0% {
       color: #f79fcb; }
     50% {
-      transform: scale(1.2);
+      transform: scale(1.1);
       color: #CF2F87; }
     100% {
       transform: scale(1);
       color: #f79fcb; } }
-  .nosotros {
-    flex-direction: column;
-    height: fit-content; }
-  #nosotros {
-    width: 100%;
-    padding: 50px 30px; }
-  #nuestraTienda {
-    width: 100%; }
+  .productosDestacados {
+    height: 3100px; }
+  .productosDestacados__card, .productosDestacados__card__cookies, .productosDestacados__card__cupCake, .productosDestacados__card__cakePop, .productosDestacados__card__bombonesChocolate, .productosDestacados__card__tortaNumero, .productosDestacados__card__giftCard, .productosDestacados__card__circo, .productosDestacados__card__naturaleza, .productosDestacados__card__bautismoY1, .productosDestacados__card__bodas, .productosDestacados__card__quince, .productosDestacados__card__tartaFrutillas, .productosDestacados__card__tartaChocolate, .productosDestacados__card__tartaDurazno, .productosDestacados__card__galletasDecoradas, .productosDestacados__card__galletasCraqueladas, .productosDestacados__card__galletasPastillaje, .productosDestacados__card__fosforitos, .productosDestacados__card__brusquetas, .productosDestacados__card__canapes, .productosDestacados__card__empanadasArabes, .productosDestacados__card__pizzetas, .productosDestacados__card__empanadas {
+    margin: 0px 0px; }
   .mapaFormularioContacto {
     align-items: center; }
     .mapaFormularioContacto .mapaFormularioContactoItem {
-      width: 80%; }
+      width: 100%; }
       .mapaFormularioContacto .mapaFormularioContactoItem iframe {
-        width: 80%;
+        width: 100%;
         height: auto; } }

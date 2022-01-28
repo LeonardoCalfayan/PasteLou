@@ -48,14 +48,19 @@
 .navbar{
     margin: 50px 20px;
     padding:20px 20px;
+    border-radius: 10px;
     border: #a0966e solid 3px;
-
-
+    justify-content: center;    
 
     &-brand{
         font-size: $tamanoFuenteNav;
         font-weight: bolder;
         margin-right: 5%;
+        transition: all 1s;
+        &:hover{
+            transform: scale(1.1);
+        }
+          
     }
 
 
@@ -64,6 +69,14 @@
         font-weight: bold;
     
     }
+
+    &-collapse{
+        flex-grow: inherit;
+    }    
+}
+
+.barraNavegacion{
+    justify-content: center;
 }
 
 #colorTexto{
@@ -73,4 +86,16 @@
 
 .nav-link{
     margin-right: 100px;
+    transition: all 1s;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+
+.active{
+    font-size: 2.5rem;
+}
+
+#active{
+    color: #ff3863;
 }

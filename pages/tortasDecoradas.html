@@ -19,7 +19,7 @@
     <header class="header">
         <div class="headerTitulo">
             <div class = "headerLogo">
-                <a href="../index.html"> <img src="../images/logoPasteLou.jpg" alt="Logo PasteLou"> </a><!-- Icono principal con link a index.html-->
+                <a href="../index.html"> <img src="../images/logoPasteLou_s_fondo.png" alt="Logo PasteLou"> </a><!-- Icono principal con link a index.html-->
             </div>
             <div id="headerTituloTexto" class="animate__animated animate__fadeInDown">
                 <h1> PasteLou </h1>
@@ -27,21 +27,19 @@
             </div>     
         </div>
 
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" id="colorTexto" href="../index.html">Inicio</a>
-                <button class="navbar-toggler" id="colorTexto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon" id="colorTexto"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                        <div class="navbar-nav">
-                        
-                            <a class="nav-link active" id="colorTexto" href="./tortasDecoradas.html">Tortas Decoradas</a>
-                            <a class="nav-link" id="colorTexto" href="./pasteleriaTradicional.html">Pastelería Tradicional</a>
-                            <a class="nav-link" id="colorTexto" href="./rinconSalado.html">Rincón Salado</a>
-                            <a class="nav-link" id="colorTexto" href="./contacto.html">Contacto</a>
-                            <!-- <a class="nav-link disabled">Disabled</a> -->
-                        </div>
+        <nav class="barraNavegacion navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" id="colorTexto" href="../index.html">Inicio</a>
+            <button class="navbar-toggler" id="colorTexto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" id="colorTexto"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                
+                    <a class="nav-link" id="active" href="./tortasDecoradas.html">Tortas Decoradas</a>
+                    <a class="nav-link" id="colorTexto" href="./pasteleriaTradicional.html">Pastelería Tradicional</a>
+                    <a class="nav-link" id="colorTexto" href="./rinconSalado.html">Rincón Salado</a>
+                    <a class="nav-link" id="colorTexto" href="./contacto.html">Contacto</a>
+                    
                 </div>
             </div>
         </nav>
@@ -49,8 +47,9 @@
 
     <section class="productosDestacados">
     
-        <h2 class="tituloSeccion"> Tortas Decoradas </h2>
-
+        <div class="productosDestacadosTitle">
+            <h2 class="tituloSeccion">Tortas Decoradas</h2>
+        </div>
         <div class="productosDestacadosCards">
 
             <article class="productosDestacados__card__circo">
@@ -82,16 +81,13 @@
         </div>        
     </section>
 
-   
-
     <section >
         <form class="formulario textoGenerico" action="/" method="post">
             <div class="formularioIzquierdo"> 
             
                 <div class="formularioItem">   
                     <legend class="tituloSeccion"> Elegí la torta que mas te guste</legend>
-                    
-                
+                                    
                 <fieldset>
                     <select name="">
                         <option value="tortaCumple">Torta Cumple Tradicional</option>
@@ -104,9 +100,10 @@
                 </div>  
                 <div class="formularioItem">
                   
-                    <label for="">Apto celíaco </label>
+                    <label for="">Sin TACC </label>
                     <input type="checkbox" name="sinTaac" value="1" />
-                    <label for="">Doble Relleno </label>
+                    <img class="logoSTacc" src="../images/sintacc.png" alt="Logo Sin TACC">
+                    <label for="">Doble relleno </label>
                     <input type="checkbox" name="dobleRelleno" value="1" />
                 </div>
                 <div class="formularioItem">
@@ -119,32 +116,23 @@
                 </div>   
             </div>
             <div class="formularioDerecho">
-                <textarea name="textarea" rows="5" cols="30">Comentanos algún detalle especial para tu torta</textarea>
+                <textarea name="textarea" rows="5" cols="25">Comentanos algún detalle especial para tu torta</textarea>
 
                 <input type="submit" value="Agregar al Carrito">
                 <input type="reset" value="Borrar pedido">
             </div>    
 
-
-
-
             </fieldset>
-
-
         </form>
-
-
-
     </section>
 
-
-
-
-
     <footer class="footer">
-        <p>© 2021. Todos los derechos reservados.</p>
-        <a href="https://www.facebook.com/pages/category/Entrepreneur/PasteLou-2195331034122883/"> <img src="../images/logoFacebook.jpg" alt="Enlace PasteLou Facebook" height="10%" width="10%"> </a>
-        <img src="../images/logoInstagram.png" alt="Enlace PasteLou Instagram"  height="10%" width="10%">
+        <p class="textoGenerico">Visitanos en nuestras redes sociales</p>
+        <div class="footerRS">    
+            <a href="https://www.facebook.com/pages/category/Entrepreneur/PasteLou-2195331034122883/"> <img src="../images/facebook-square-brands.svg" width=100% height=100% alt="Enlace PasteLou Facebook"></a>
+            <a href="https://www.instagram.com/pasteloureposteria/?utm_medium=copy_link"> <img src="../images/instagram-square-brands.svg" width=100% height=100% alt="Enlace PasteLou Instagram"></a>
+        </div>
+        <p class="textoGenerico">© 2021. Todos los derechos reservados.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>

@@ -3,6 +3,7 @@
 
 .tituloSeccion{
     font-size: $tamanoFuenteSecundario;
+    font-weight: 800;
     text-align: center;
     padding: 30px 0;
 }
@@ -10,4 +11,10 @@
 .textoGenerico{
     font-size: $tamanoFuenteGeneral;
     text-align: center;
+}
+
+//Sobreescritura de propiedades que modifica automáticamente Bootstrap
+
+h1, h2, h3{
+    font-weight: 800;
 }
